@@ -19,9 +19,11 @@ function check(input, error) {
         error.innerHTML = "This feild can't be empty" ;
         input.style.border = "1px solid #ff0000";
         error.style.color = "#ff0000";
+        input.style.margin = "10px 0 0  0";
+        error.style.margin = "0";
     } else {
         error.innerHTML = "";
-        input.style.border = "1px solid #666";
+        input.style.border = "1px solid #666"; 
     };
 };
 
@@ -29,7 +31,9 @@ function checkEmail() {
     if ( !email.value.match(emailFormat)){
         emailError.innerHTML = "Email is not valid"
         email.style.border= "1px solid #ff0000";
-        email.style.color = "#ff0000";
+        emailError.style.color = "#ff0000";
+        email.style.margin = "10px 0 0  0";
+        emailError.style.margin = "0";
     } else {
         emailError.innerHTML = "";
         email.style.border = "1px solid #666";
